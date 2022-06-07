@@ -16,7 +16,7 @@ const renderMovieHTML = () => {
             <div>
             <h3>Title: ${movie.title}</h3>
             <p>Rating: ${movie.rating}</p>
-            <button data-id="${movie.id}">Edit</button>
+            <button class="editBtn" data-id="${movie.id}">Edit</button>
             <button class="delBtn" data-id="${movie.id}">Delete</button>
             </div>
             <br>
@@ -35,20 +35,20 @@ renderMovieHTML()
 
 // Edit function
 
-// const editMovie = (movie) => {
-//     const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
-//     let options = {
-//         method: "PATCH",
-//         headers: {
-//             // Content-Type : tells the server what type of data we are sending with our request. When interacting with a JSON API, this will usually be in application/json.
-//             'Content-Type': 'application/json' // establishing the format in which we send the data.
-//         },
-//         body: JSON.stringify(movie) // convert the JS object into a JSON String before sending it to the server.
-//     }
-//
-//     return fetch(`${URL}/${movie.id}`, options).then(resp => resp.json())
-// }
-//
+const editMovie = (movie) => {
+    const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
+    let options = {
+        method: "PATCH",
+        headers: {
+            // Content-Type : tells the server what type of data we are sending with our request. When interacting with a JSON API, this will usually be in application/json.
+            'Content-Type': 'application/json' // establishing the format in which we send the data.
+        },
+        body: JSON.stringify(movie) // convert the JS object into a JSON String before sending it to the server.
+    }
+
+    return fetch(`${URL}/${movie.id}`, options).then(resp => resp.json())
+}
+
 // let editedMovie = {
 //     id: 1,
 //     title: "Pulp Fiction",
@@ -95,20 +95,3 @@ const deleteMovie = (id) => {
     return fetch(`${URL}/${id}`, options).then(() => console.log("The movie " + id + " has been deleted successfully")).then(renderMovieHTML)
 }
 
-// renderMovieHTML().then(() => {
-//     document.getElementsByClass("delBtn").addEventListener("click", function () {
-//         deleteMovie(this.attr("#data-id"))
-//     })
-// });
-
-// document.getElementById("delBtn").addEventListener("click", function (e) {
-//     e.preventDefault();
-//     let deleteMovies = {
-//         title: document.getElementById("title"),
-//         rating: document.getElementById("rating")
-//     }
-//     deleteMovie(deleteMovies).then((res) => {
-//         console.log(res)
-//         renderMovieHTML()
-//     })
-// })
