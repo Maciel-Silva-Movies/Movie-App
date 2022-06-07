@@ -1,10 +1,18 @@
-document.getElementById('alrt').innerHTML='<img src="/images/EXfh.gif">';
-setTimeout(function() {document.getElementById('alrt').innerHTML='';},3000);
+setTimeout(() => {
+    const box = document.getElementsByTagName('body').
+        // 👇️ removes element from DOM
+        box.style.display = 'none';
+    // 👇️ hides element (still takes up space on page)
+    // box.style.visibility = 'hidden';
+}, 2000); // 👈️ time in milliseconds
 
+document.getElementById('alrt').innerHTML='<img src="/images/EXfh.gif">';
 const getAllMovies = () => {
     const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
     return fetch(URL).then(res => res.json());
 }
+
+setTimeout(function() {document.getElementById('alrt').innerHTML='';},3000);
 
 console.log(getAllMovies());
 
@@ -28,6 +36,20 @@ const renderMovieHTML = () => {
         $(".delBtn").on("click", function () {
             deleteMovie($(this).data("id"))
         })
+    }).then(() => {
+        $(".editBtn").on("click", function () {
+            let newTitle = prompt("What is the new title?")
+            let newRate = prompt("What is the new rating?")
+            let movieObj = {
+                id: $(this).data("id"),
+                title: newTitle,
+                rating: newRate
+            }
+            editMovie(movieObj);
+            setTimeout(function () {
+                document.location.reload();
+            }, 3000);
+        });
     });
 }
 
@@ -48,15 +70,6 @@ const editMovie = (movie) => {
 
     return fetch(`${URL}/${movie.id}`, options).then(resp => resp.json())
 }
-
-// let editedMovie = {
-//     id: 1,
-//     title: "Pulp Fiction",
-// }
-
-// editMovie(editedMovie);
-
-// Add Function
 
 const addMovie = (movieObj) => {
     const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
