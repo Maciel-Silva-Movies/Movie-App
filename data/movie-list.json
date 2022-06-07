@@ -15,46 +15,53 @@
       "id": 1
     },
     {
-      "title": "Pulp Fiction",
-      "director": "Quinten Tarantino",
-      "rating": 5,
+      "title": "The Hang Over",
+      "director": "Todd Phillips",
+      "rating": 4,
       "genre": "Comedy",
-      "id": 1
+      "id": 2
     },
     {
-      "title": "Pulp Fiction",
-      "director": "Quinten Tarantino",
-      "rating": 5,
+      "title": "Anchorman: The Legend of Ron Burgundy",
+      "director": "Adam McKay",
+      "rating": 3,
       "genre": "Comedy",
-      "id": 1
+      "id": 3
     },
     {
-      "title": "Pulp Fiction",
-      "director": "Quinten Tarantino",
-      "rating": 5,
+      "title": "Superbad",
+      "director": "Greg Mottle",
+      "rating": 4,
       "genre": "Comedy",
-      "id": 1
+      "id": 4
     },
     {
-      "title": "Pulp Fiction",
-      "director": "Quinten Tarantino",
-      "rating": 5,
-      "genre": "Comedy",
-      "id": 1
+      "title": "Halloween",
+      "director": "John Carpenter",
+      "rating": 4,
+      "genre": "Horror",
+      "id": 5
     },
     {
-      "title": "Pulp Fiction",
-      "director": "Quinten Tarantino",
-      "rating": 5,
-      "genre": "Comedy",
-      "id": 1
+      "title": "Friday the 13th",
+      "director": "Sean Cunningham",
+      "rating": 3,
+      "genre": "Horror",
+      "id": 6
     },
     {
-      "title": "Pulp Fiction",
-      "director": "Quinten Tarantino",
+      "title": "Nightmare on Elm Street",
+      "director": "Wes Craven",
       "rating": 5,
-      "genre": "Comedy",
-      "id": 1
+      "genre": "Horror",
+      "id": 7
+    },
+    {
+      "title": "It",
+      "director": "Tommy Lee Wallace",
+      "rating": 5,
+      "genre": "Horror",
+      "id": 8
     }
   ]
 }
