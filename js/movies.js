@@ -1,12 +1,28 @@
-document.getElementById('alrt').innerHTML='<img src="/images/EXfh.gif">';
-setTimeout(function() {document.getElementById('alrt').innerHTML='';},3000);
+setTimeout(() => {
+    const box = document.getElementsByTagName('body').
+    // 👇️ removes element from DOM
+    box.style.display = 'none';
+    // 👇️ hides element (still takes up space on page)
+    // box.style.visibility = 'hidden';
+}, 3000); // 👈️ time in milliseconds
 
+document.getElementById('alrt').innerHTML='<img src="/images/EXfh.gif">';
 const getAllMovies = () => {
     const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
     return fetch(URL).then(res => res.json());
 }
-
 console.log(getAllMovies());
+setTimeout(function() {document.getElementById('alrt').innerHTML='';},3000);
+
+
+// const getAllMovies = () => {
+//     const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
+//     return fetch(URL).then(res => res.json());
+// }
+
+
+//
+
 
 const renderMovieHTML = () => {
     console.log("Rendering Movie HTML")
