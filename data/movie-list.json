@@ -8,13 +8,6 @@
       "id": 1
     },
     {
-      "title": "The Pulp Fiction",
-      "director": "Quinten Tarantino",
-      "rating": 5,
-      "genre": "Comedy",
-      "id": 1
-    },
-    {
       "title": "The Hang Over",
       "director": "Todd Phillips",
       "rating": 4,
@@ -57,7 +50,7 @@
       "id": 7
     },
     {
-      "title": "It",
+      "title": "IT",
       "director": "Tommy Lee Wallace",
       "rating": 5,
       "genre": "Horror",
