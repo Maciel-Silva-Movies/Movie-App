@@ -16,6 +16,8 @@ setTimeout(function() {document.getElementById('alrt').innerHTML='';},3000);
 
 console.log(getAllMovies());
 
+//test
+
 const renderMovieHTML = () => {
     console.log("Rendering Movie HTML")
     getAllMovies().then((data) => {
