@@ -20,6 +20,7 @@ const getAllMovies = () => {
 }
 console.log(getAllMovies());
 //Long template string that includes movie attributes]]
+
 const renderMovieHTML = () => {
     console.log("Rendering Movie HTML")
     getAllMovies().then((data) => {
@@ -39,7 +40,8 @@ const renderMovieHTML = () => {
         console.log(movieCards);
         //Deletes movies//
         document.getElementById("library").innerHTML = movieCards.join("");
-    }).then(() => {
+        })
+        .then(() => {
         $(".delBtn").on("click", function () {
             deleteMovie($(this).data("id"))
         })
