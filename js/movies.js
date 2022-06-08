@@ -1,20 +1,25 @@
 "use strict";
-
+//Loading gif//
 document.getElementById('alrt').innerHTML='<img src="/images/EXfh.gif">';
 
 setTimeout(function() {document.getElementById('alrt').innerHTML='';},3000);
-
-let delay = 3000; // delay time in milliseconds
+//initially hidden, now displays body of HTML//
+let delay = 4000; // delay time in milliseconds
 let timeoutId = setTimeout(function () {
     document.querySelector(".hide-first").style.visibility = "visible";
 }, delay);
 
+// let delay2 = 4000; // delay time in milliseconds
+// let timeoutId2 = setTimeout(function () {
+//     document.querySelector("#carouselExampleFade").style.visibility = "visible";
+// }, delay2);
+// Grabs glitch JSON website information (i.e. Objects)//
 const getAllMovies = () => {
     const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
     return fetch(URL).then(res => res.json());
 }
 console.log(getAllMovies());
-
+//Long template string that includes movie attributes]]
 const renderMovieHTML = () => {
     console.log("Rendering Movie HTML")
     getAllMovies().then((data) => {
@@ -32,11 +37,13 @@ const renderMovieHTML = () => {
             `
         })
         console.log(movieCards);
+        //Deletes movies//
         document.getElementById("library").innerHTML = movieCards.join("");
     }).then(() => {
         $(".delBtn").on("click", function () {
             deleteMovie($(this).data("id"))
         })
+        // Edit movies//
     }).then(() => {
         $(".editBtn").on("click", function () {
             let newTitle = prompt("What is the new title?")
@@ -68,7 +75,7 @@ const editMovie = (movie) => {
 
     return fetch(`${URL}/${movie.id}`, options).then(resp => resp.json()).then(() => renderMovieHTML())
 }
-
+//Add movie//
 const addMovie = (movieObj) => {
     const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
     let options = {
@@ -80,7 +87,7 @@ const addMovie = (movieObj) => {
     }
     return fetch(URL, options).then(res => res.json()).then(result => console.log("You've successfully created a new movie!", result))
 }
-
+//Add movie actions with "coming soon" img//
 document.getElementById("addMovie").addEventListener("click", function (e) {
     e.preventDefault();
     let newMovie = {
