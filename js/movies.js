@@ -91,6 +91,7 @@ const addMovie = (movieObj) => {
 document.getElementById("addMovie").addEventListener("click", function (e) {
     e.preventDefault();
     let newMovie = {
+        image: document.getElementById("title").innerHTML = '<img src="/images/coming-soon.jpeg">',
         title: document.getElementById("title").value,
         rating: document.getElementById("rating").value
     }
