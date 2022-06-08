@@ -4,8 +4,8 @@ document.getElementById('alrt').innerHTML='<img src="/images/EXfh.gif">';
 
 setTimeout(function() {document.getElementById('alrt').innerHTML='';},3000);
 
-var delay = 3000; // delay time in milliseconds
-var timeoutId = setTimeout(function () {
+let delay = 3000; // delay time in milliseconds
+let timeoutId = setTimeout(function () {
     document.querySelector(".hide-first").style.visibility = "visible";
 }, delay);
 
@@ -25,6 +25,8 @@ const renderMovieHTML = () => {
         let movieCards = data.map(movie => {
             return `
             <div>
+            <div >${movie.image}</div>
+            <br>
             <h3>Title: ${movie.title}</h3>
             <p>Rating: ${movie.rating}</p>
             <button class="editBtn" data-id="${movie.id}">Edit</button>
@@ -53,7 +55,7 @@ const renderMovieHTML = () => {
                 document.location.reload();
             }, 3000);
         });
-    });
+    })
 }
 
 renderMovieHTML()

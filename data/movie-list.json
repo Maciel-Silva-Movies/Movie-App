@@ -1,6 +1,7 @@
 {
   "movies": [
     {
+      "image": "<img src='../images/Pulp-fiction.jpg'>",
       "title": "Pulp Fiction",
       "director": "Quinten Tarantino",
       "rating": 5,
@@ -8,6 +9,7 @@
       "id": 1
     },
     {
+      "image": "<img src='../images/hangover.jpg'>",
       "title": "The Hang Over",
       "director": "Todd Phillips",
       "rating": 4,
@@ -15,6 +17,7 @@
       "id": 2
     },
     {
+      "image": "<img src='../images/anchorman.jpg'>",
       "title": "Anchorman: The Legend of Ron Burgundy",
       "director": "Adam McKay",
       "rating": 3,
@@ -22,6 +25,7 @@
       "id": 3
     },
     {
+      "image": "<img src='../images/Superbad.jpg'>",
       "title": "Superbad",
       "director": "Greg Mottle",
       "rating": 4,
@@ -29,6 +33,7 @@
       "id": 4
     },
     {
+      "image": "<img src='../images/Halloween.jpg'>",
       "title": "Halloween",
       "director": "John Carpenter",
       "rating": 4,
@@ -36,6 +41,7 @@
       "id": 5
     },
     {
+      "image": "<img src='../images/Friday-13th.jpg'>",
       "title": "Friday the 13th",
       "director": "Sean Cunningham",
       "rating": 3,
@@ -43,6 +49,7 @@
       "id": 6
     },
     {
+      "image": "<img src='../images/Nightmare-on-elm.jpg'>",
       "title": "Nightmare on Elm Street",
       "director": "Wes Craven",
       "rating": 5,
@@ -50,6 +57,7 @@
       "id": 7
     },
     {
+      "image": "<img src='../images/It.jpg'>",
       "title": "IT",
       "director": "Tommy Lee Wallace",
       "rating": 5,
