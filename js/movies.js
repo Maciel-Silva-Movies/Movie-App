@@ -14,10 +14,6 @@ const getAllMovies = () => {
     return fetch(URL).then(res => res.json());
 }
 console.log(getAllMovies());
-// const getAllMovies = () => {
-//     const URL = "https://agreeable-tide-wolverine.glitch.me/movies";
-//     return fetch(URL).then(res => res.json());
-// }
 
 const renderMovieHTML = () => {
     console.log("Rendering Movie HTML")
@@ -51,9 +47,6 @@ const renderMovieHTML = () => {
                 rating: newRate
             }
             editMovie(movieObj);
-            setTimeout(function () {
-                document.location.reload();
-            }, 3000);
         });
     })
 }
@@ -73,7 +66,7 @@ const editMovie = (movie) => {
         body: JSON.stringify(movie) // convert the JS object into a JSON String before sending it to the server.
     }
 
-    return fetch(`${URL}/${movie.id}`, options).then(resp => resp.json())
+    return fetch(`${URL}/${movie.id}`, options).then(resp => resp.json()).then(() => renderMovieHTML())
 }
 
 const addMovie = (movieObj) => {
