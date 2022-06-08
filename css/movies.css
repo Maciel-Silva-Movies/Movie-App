@@ -1,3 +1,6 @@
+.hide-first{
+    visibility: hidden;
+}
 
 img{
     height:600px;
