@@ -25,7 +25,7 @@ const renderMovieHTML = () => {
         let movieCards = data.map(movie => {
             return `
             <div>
-            <div>${movie.image}</div>
+            <div class="w-50">${movie.image}</div>
             <br>
             <h3>Title: ${movie.title}</h3>
             <p>Rating: ${movie.rating}</p>
